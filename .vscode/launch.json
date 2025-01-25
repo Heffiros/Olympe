@@ -2,19 +2,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Déboguer Express",
+      "name": "Launch Apollon & Express",
       "type": "node",
       "request": "launch",
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/Hydra/src/app.js", // Remplace app.js par ton fichier principal
-      "env": {
-        "NODE_ENV": "development"
-      },
-      "outFiles": [
-        "${workspaceFolder}/dist/**/*.js"
-      ]
+      "preLaunchTask": "Start Frontend",
+      "postDebugTask": "Start Backend",
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/app.js"
     }
   ]
 }

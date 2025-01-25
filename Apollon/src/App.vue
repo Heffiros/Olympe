@@ -52,7 +52,6 @@ export default {
       this.recognition.start()
     },
     async sendTranscription() {
-      console.log('Send Transcription : starting')
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
