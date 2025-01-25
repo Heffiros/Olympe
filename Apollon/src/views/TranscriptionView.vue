@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div class="container">
     <h1 class="title">Bienvenue dans le projet Apollon</h1>
     <div class="content">
       <button @click="startListening" :disabled="isListening">
