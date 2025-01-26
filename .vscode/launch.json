@@ -9,9 +9,8 @@
         "<node_internals>/**"
       ],
       "preLaunchTask": "Start Frontend",
-      "postDebugTask": "Start Backend",
       "runtimeExecutable": "node",
-      "program": "${workspaceFolder}/app.js"
+      "program": "${workspaceFolder}/Hydra/src/app.js"
     }
   ]
 }

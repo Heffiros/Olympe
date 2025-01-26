@@ -1544,6 +1544,11 @@ nth-check@^2.1.1:
   dependencies:
     boolbase "^1.0.0"
 
+one-time@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/one-time/-/one-time-0.0.4.tgz#f8cdf77884826fe4dff93e3a9cc37b1e4480742e"
+  integrity sha512-qAMrwuk2xLEutlASoiPiAMW3EN3K96Ka/ilSXYr6qR1zSVXw2j7+yDSqGTC4T9apfLYxM3tLLjKvgPdAUK7kYQ==
+
 open@^10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/open/-/open-10.1.0.tgz#a7795e6e5d519abe4286d9937bb24b51122598e1"
@@ -1715,6 +1720,13 @@ run-applescript@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/run-applescript/-/run-applescript-7.0.0.tgz#e5a553c2bffd620e169d276c1cd8f1b64778fbeb"
   integrity sha512-9by4Ij99JUr/MCFBUkDKLWK3G9HVXmabKz9U5MlIAIuvuzkiOicRYs8XJLxX+xahD+mLiiCYDqF9dKAgtzKP1A==
+
+say@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/say/-/say-0.16.0.tgz#c9e0cfe9e5b2c9af4098eab4023027e4c0e2e6e0"
+  integrity sha512-yEfncNu3I6lcZ6RIrXgE9DqbrEmvV5uQQ8ReM14u/DodlvJYpveqNphO55RLMSj77b06ZKNif/FLmhzQxcuUXg==
+  dependencies:
+    one-time "0.0.4"
 
 semver@^6.3.1:
   version "6.3.1"

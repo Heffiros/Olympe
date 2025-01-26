@@ -5,6 +5,9 @@
       <button @click="startListening" :disabled="isListening">
         {{ isListening ? 'Écoute en cours...' : 'Démarrer l\'écoute' }}
       </button>
+      <button @click="speakText">
+        Parle
+      </button>
       <p v-if="transcription" class="transcription">Transcription : {{ transcription }}</p>
       <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
     </div>
@@ -18,7 +21,13 @@ export default {
       transcription: '',
       isListening: false,
       recognition: null,
-      errorMessage: ''
+      errorMessage: '',
+      hydraTextResponse: null
+    }
+  },
+  watch: {
+    hydraTextResponse() {
+      this.speakText()
     }
   },
   methods: {
@@ -61,8 +70,24 @@ export default {
       try {
         const response = await fetch('http://localhost:3000/transcription', requestOptions)
         console.log(response)
+        this.hydraTextResponse = 'Bonjour Alexandre élément rajouté envoyé et renvoyé par hydra'
       } catch (error) {
         console.error(error);
+      }
+    },
+    speakText() {
+      this.errorMessage = null
+      if (!this.hydraTextResponse)
+        return
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel()
+        this.speechSynthesisUtterance = new SpeechSynthesisUtterance(this.hydraTextResponse)
+        this.speechSynthesisUtterance.lang = 'fr-FR'
+        this.speechSynthesisUtterance.rate = 1
+        this.speechSynthesisUtterance.pitch = 1
+        window.speechSynthesis.speak(this.speechSynthesisUtterance)
+      } else {
+        this.errorMessage = "La synthèse vocale n'est pas supportée dans ce navigateur."
       }
     }
   }
