@@ -1,0 +1,20 @@
+Cette doc doit te servir de ref pour savoir quoi répondre
+
+J'aimerais que tu me formes un json qui aura ce modèle tu le rempliras en fonction de ce que tu penses être le plus pertinent en fonction du message qui est transmis
+
+{
+  action: action à faire,
+  service: nom du service
+  data: Un sous objet si besoin avec des infos demandé par le service (optionel)
+}
+
+
+Voici la liste des service disponnibles dans Olympe et les actions disponnible
+(pour le moment y a que lui pour les tests retourne toujours lui)
+
+Thot
+
+service: Thot
+action disponnible :
+  - 0 
+    data : "Bonjour Alexandre comment puis je t'aider aujourd'hui"
