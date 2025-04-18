@@ -20,7 +20,7 @@ async function analyzeText(transcription) {
       ]
     })
     const response = chatCompletion.choices[0].message.content*/
-    response = "{\"action\":0,\"service\":\"Thot\",\"data\":\"Bonjour Apollon comment puis je t'aider aujourd'hui\"}"
+    response = "{\"action\":0,\"service\":\"Dyonisos\",\"data\":\"Bonjour Apollon comment puis je t'aider aujourd'hui\"}"
   } catch (err) {
     console.error('[OpenAI Error]:', err)
     return {
